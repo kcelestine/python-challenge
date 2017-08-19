@@ -9,15 +9,13 @@ for line in lines:
 	line = list(line)
 	for c in line:
 		d[c] = d.get(c, 0) +1
-
-print d
-
-
+values = []
 for k,v in d.items():
-	print("{:<12} {:<12}".format(k, v))
+	values.append(v)
 
-'''
-counts = dict()
-for i in items:
-  counts[i] = counts.get(i, 0) + 1
-'''
+values.sort()
+
+for v in values:
+	print v
+
+print values
