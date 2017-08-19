@@ -13,7 +13,6 @@ def check(text):
 	else:
 		return False
 
-lines = []
 for line in lines:
 	if(check(line)):
 		print line
