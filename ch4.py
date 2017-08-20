@@ -7,7 +7,7 @@ lines = f.readlines()
 
 count = 0
 def check(text):
-	pattern="([A-Z][A-Z][A-Z][a-z][A-Z][A-Z][A-Z])"
+	pattern="[a-z][A-Z]{3}[a-z][A-Z]{3}[a-z]"
 	if re.search(pattern,  text):
 		return True
 	else:
@@ -15,5 +15,7 @@ def check(text):
 
 for line in lines:
 	if(check(line)):
+		count += 1 
 		print line
+print count
 
